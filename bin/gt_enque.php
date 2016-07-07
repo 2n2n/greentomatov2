@@ -14,7 +14,8 @@ function gt_enque_js() {
 	wp_enqueue_script('html5', get_template_directory_uri()."/js/html5.js", ['jquery'], false, true);
 	wp_enqueue_script('modernizr', get_template_directory_uri()."/js/lib/modernizr-2.6.2.min.js", ['jquery'], false);
 	wp_enqueue_script('fancybox', get_template_directory_uri()."/js/jquery.fancybox.pack.js", ['jquery'], false);
-	wp_enqueue_script('animated-modal', get_template_directory_uri()."/js/animatedModal.min.js", ['jquery'], false);
+	wp_enqueue_script('animated-modal', get_template_directory_uri()."/js/animatedModal.js", ['jquery'], false);
+	wp_enqueue_script('pace-js', get_template_directory_uri()."/js/pace.min.js", ['jquery'], false);
 
 	wp_enqueue_script('custom', get_template_directory_uri()."/js/custom.js", ['jquery', 'modernizr'], false, true);
 }	
