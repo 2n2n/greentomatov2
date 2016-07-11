@@ -22,7 +22,7 @@ function gt_create_required_categories_and_pages() {
 
 function gt_insert_required_pages($pages, $parent_id) {
 
-	$required = ['Green Tomato', 'About Us', 'Moving Pictures', 'Rates & Faq', 'Stay Connected', 'Work With Us'];
+	$required = ['Green Tomato', 'About Us', 'Moving Pictures', 'Rates &amp; Faq', 'Stay Connected', 'Work With Us'];
 	if($pages != false) {
 		foreach($required as $page_title) {
 			// search 
