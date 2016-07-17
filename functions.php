@@ -4,8 +4,15 @@ include('bin/gt_register_menus.php');
 
 include('bin/admin/gt_theme_settings.php');
 
+function dd($data) {
+	echo "<pre>";
+	var_dump($data);
+	echo "</pre>";
+}
+
 //register menu
 add_action('init', 'gt_register_menus');
+
 // enqueu scripts
 add_action('wp_enqueue_scripts', 'gt_enque_css');
 add_action('wp_enqueue_scripts', 'gt_enque_js');

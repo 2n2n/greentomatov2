@@ -206,7 +206,7 @@ footer { }
 .contact-info .set span { display: inline-block; vertical-align: bottom; padding-right: 5px; }
 
 /** Video Popup **/
-.animatedModal { background: #ededed !important; }
+.animatedModal { height: 0px; width: 0px; background: #ededed !important; }
 .modal-content,
 .video-content { position: relative; overflow: hidden; height: 100%; }
 .video-content { width: 50%; box-sizing: border-box; }

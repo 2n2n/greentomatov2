@@ -18,6 +18,10 @@ function gt_create_required_categories_and_pages() {
 	$pages = get_pages();
 	$parent_id = get_page_by_title('Green Tomato Pages')->ID; 
 	gt_insert_required_pages($pages, $parent_id);
+
+	// echo "<pre>";
+	// var_dump($categories);
+	// echo "<pre>";
 }
 
 function gt_insert_required_pages($pages, $parent_id) {

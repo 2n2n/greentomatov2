@@ -53,21 +53,15 @@
 		// Video Popup
 		$(".video-popup").animatedModal({
 			afterOpen: function() {
-				// var target_el = $(this).attr('href');
-				// var $video_player = $(target_el).find('.videoPlay'); 
-				// var videoURL = $(target_el).find('.videoPlay').prop('src');
-				
-				// videoURL += "&autoplay=1";
-				// $video_player.prop('src',videoURL);
+				var videoURL = $('.videoPlay').prop('src');
+				videoURL += "&autoplay=1";
+				$('#videoPlay').prop('src',videoURL);
 			},
 			beforeClose: function() {
-				// var target_el = $(this).attr('href');
-				// var $video_player = $(target_el).find('.videoPlay'); 
-				// var videoURL = $($video_player).find('.videoPlay').prop('src');
-
-				// videoURL = videoURL.replace("&autoplay=1", "");
-				// $video_player.find('.videoPlay').prop('src','');
-				// $video_player.find('.videoPlay').prop('src',videoURL);
+				var videoURL = $('.videoPlay').prop('src');
+				videoURL = videoURL.replace("&autoplay=1", "");
+				$('#videoPlay').prop('src','');
+				$('#videoPlay').prop('src',videoURL);
 			},
 		});
 
