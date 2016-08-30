@@ -2,6 +2,9 @@
 include('bin/gt_enque.php');
 include('bin/gt_register_menus.php');
 
+update_option('siteurl','http://104.236.78.136/greentomato');
+update_option('home','http://104.236.78.136/greentomato');
+
 include('bin/admin/gt_theme_settings.php');
 
 function dd($data) {
