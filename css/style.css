@@ -148,7 +148,7 @@ footer { }
 .wedding-post ul li:first-child .wedding-left { background:#ededed url('../images/home/random_bg.jpg') no-repeat top left; }
 .wedding-post ul li:last-child .wedding-post-video { margin-bottom:0; }
 .wedding-post-video { margin-bottom:40px; width: 100%; }
-.wedding-post-video iframe { width: 100% !important; height: auto !important; }
+.wedding-post-video iframe { width: 100% !important; height: 300px !important; }
 
 .wedding-inner { width:50%; box-sizing:border-box; }
 .wedding-right h2 { padding-bottom:0; color:#9eb563; }
