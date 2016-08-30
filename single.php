@@ -7,16 +7,13 @@ get_header();
 			<div class="wedding-post container-holder">
 				<ul>
 				<?php 
-				$category = term_exists('Moving Pictures', 'category');
-				$args = array('category' => $category['term_id']);
-				$posts = get_posts( $args );
 				// dd($posts);
 				if(count($posts) > 0): 
-					foreach($posts as $key => $post): setup_postdata($post); ?>
+					foreach($posts as $post): setup_postdata($post); ?>
 					<?php $meta_video = get_meta_video(); ?>
 					<li>
 						<div class="wedding-left wedding-inner fl">
-							<?php if($key == 0): ?><h2>WEDDINGS</h2> <?php endif;?>
+							<h2>WEDDINGS</h2>
 							<div class="wedding-post-video img fl"><a class="video-popup" href="#the_post-id-<?php echo get_the_ID(); ?>">
 								<?php echo $meta_video; ?>
 							</div>

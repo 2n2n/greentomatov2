@@ -9,6 +9,9 @@ get_header();
 				<?php if(have_posts()): 
 					while(have_posts()): the_post(); ?>
 					<li>
+						<?php 
+							$meta_video = get_meta_video();
+						?>
 						<div class="wedding-left wedding-inner fl">
 							<h2>WEDDINGS</h2>
 							<div class="wedding-post-video img fl"><a class="video-popup" href="#the_post-id-<?php echo get_the_ID(); ?>"><img src="<?php echo get_template_directory_uri(); ?>/images/home/wedding_post.jpg" width="620" height="349" alt="" title=""/></a></div>
@@ -28,10 +31,10 @@ get_header();
 							<div class="close-animatedModal close-the_post-id-<?php echo get_the_ID()?>"></div>
 								<div class="modal-content">
 									<div class="video-content fl">
-										<iframe class="videoPlay" src="https://www.youtube.com/embed/I8KfD6z2DBY?&showinfo=0&rel=0" frameborder="0" allowfullscreen width="" height=""></iframe>
+										<?php echo $meta_video; ?>
 									</div>
 									<div class="video-content v-c-right fr">
-										<h2>RIGHT IN FRONT OF ME</h2>
+										<h2><?php the_title(); ?></h2>
 										<h3>Mike and Kit <span>Sunday: February 27, 2015</span></h3>
 										<p>“Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.”</p>
 										<p>“Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.”</p>

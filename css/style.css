@@ -42,7 +42,7 @@ header { background:#fff; }
 .par-xl { font-size:18px; }
 
 footer { }
-.main-holder { position:relative; overflow:hidden; }
+.main-holder { position:relative; overflow:visible; }
 
 .preloader { position:fixed; width:100%; height:100%; overflow:hidden; z-index:999; }
 .spinner { position: absolute; width:80px; height:80px; top: 50%; left: 50%; margin-left:-40px; margin-top:-40px; animation: rotatee 2.0s infinite linear; -webkit-animation: rotatee 2.0s infinite linear; -moz-animation: rotatee 2.0s infinite linear; -ms-animation: rotatee 2.0s infinite linear; -o-animation: rotatee 2.0s infinite linear; }
@@ -147,10 +147,11 @@ footer { }
 .wedding-left { padding:15px; background:#ededed; }
 .wedding-post ul li:first-child .wedding-left { background:#ededed url('../images/home/random_bg.jpg') no-repeat top left; }
 .wedding-post ul li:last-child .wedding-post-video { margin-bottom:0; }
-.wedding-post-video { margin-bottom:40px; }
+.wedding-post-video { margin-bottom:40px; width: 100%; }
+.wedding-post-video iframe { width: 100% !important; height: auto !important; }
 
 .wedding-inner { width:50%; box-sizing:border-box; }
-.wedding-right h2 { padding-bottom:0; line-height:16px; color:#9eb563; }
+.wedding-right h2 { padding-bottom:0; color:#9eb563; }
 .wedding-right.wedding-right-1 { padding:73px 15px 15px 15px; }
 .wedding-right { font-size:16px; padding:15px; padding-top:20px; }
 .wedding-right h3 { font-size:19px; font-weight:normal; padding-bottom:30px; }
@@ -163,7 +164,7 @@ footer { }
 .feature-holder h1 { font-size:50px; font-family:'neou'; font-weight:normal; color:#7b7b7b; text-align:center; }
 .feature-holder h1 span { padding-top:7px; border-top:1px solid #7b7b7b; border-bottom:1px solid #7b7b7b; }
 .feature-holder { margin:40px 0; padding:10px; border:1px solid #dfdfdf; }
-.fh-inner { padding:20px 10px; padding-top:40px; background:#ededed; }
+.fh-inner { padding:10px 10px; padding-top:10px; background:#ededed; }
 .feature-list { padding-top:30px; }
 .feature-list ul li { display:inline-block; text-align:left; vertical-align:top; max-width:395px; padding:0 13px; }
 
@@ -268,3 +269,35 @@ footer { }
 @media only screen and (max-width: 480px) {}
 /* MOBILE PORTRAIT */
 @media only screen and (max-width: 320px) { }
+
+
+.landing header {
+  top: -70px;
+  background: transparent;
+  position: relative;
+}
+
+.landing header .menu-logo-holder {
+  transform: translateY(38%);
+}
+
+.landing .player,
+.landing .desc {
+  display: table-cell;
+}
+
+.landing .fh-inner {
+  display: flex;
+}
+.landing .desc h2 {
+  font-family: 'neou';
+  font-size: 30px;
+}
+.landing .desc {
+  width: 30%;
+  padding: 10px;
+}
+.landing .player {
+  width: 70%;
+}
+

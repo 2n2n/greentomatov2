@@ -10,6 +10,11 @@ function dd($data) {
 	echo "</pre>";
 }
 
+
+function get_meta_video() {
+	$id = get_the_ID();
+	return get_post_meta($id, 'gt_video', true);
+}
 //register menu
 add_action('init', 'gt_register_menus');
 

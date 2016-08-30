@@ -51,19 +51,19 @@
 		});
 
 		// Video Popup
-		$(".video-popup").animatedModal({
-			afterOpen: function() {
-				var videoURL = $('.videoPlay').prop('src');
-				videoURL += "&autoplay=1";
-				$('#videoPlay').prop('src',videoURL);
-			},
-			beforeClose: function() {
-				var videoURL = $('.videoPlay').prop('src');
-				videoURL = videoURL.replace("&autoplay=1", "");
-				$('#videoPlay').prop('src','');
-				$('#videoPlay').prop('src',videoURL);
-			},
-		});
+		// $(".video-popup").animatedModal({
+		// 	afterOpen: function() {
+		// 		var videoURL = $('.videoPlay').prop('src');
+		// 		videoURL += "&autoplay=1";
+		// 		$('#videoPlay').prop('src',videoURL);
+		// 	},
+		// 	beforeClose: function() {
+		// 		var videoURL = $('.videoPlay').prop('src');
+		// 		videoURL = videoURL.replace("&autoplay=1", "");
+		// 		$('#videoPlay').prop('src','');
+		// 		$('#videoPlay').prop('src',videoURL);
+		// 	},
+		// });
 
 	});
 
