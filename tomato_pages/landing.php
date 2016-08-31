@@ -7,7 +7,7 @@
 		<div class="feature-holder">
 			<div class="fh-inner">
 				<section class="player">
-				<video style="width: 100%" autoplay loop>
+				<video style="width: 100%" autoplay loop muted>
 				  <source src="<?php echo get_bloginfo('url').'/wp-content/uploads/videos/teaser.mp4'?>" type="video/mp4">
 				  Your browser does not support the video tag.
 				</video>
