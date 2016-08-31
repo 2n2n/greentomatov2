@@ -29,7 +29,7 @@ function clean_custom_menus($menu_name) {
 			if($key == 3) {
 				$list_html .= "<li class='menu-logo-holder'>" .
 					"<a href='{$base_url}'>" .
-						"<div class='menu-logo bp-ab'>" .
+						"<div class='menu-logo bp-ab'> <div class='saling-pusa'></div>" .
 							"<span class='bp-ab logo-part1 inview' data-delay='300'><img src='{$template_url}/images/page_template/green.png' width='106' height='106' alt='' title=''/></span>" .
 							"<span class='bp-ab logo-part2 inview' data-delay='300'><img src='{$template_url}/images/page_template/pink.png' width='106' height='106' alt='' title=''/></span>" .
 							"<span class='bp-ab logo-part3 inview' data-delay='300'><img src='{$template_url}/images/page_template/gray_1.png' width='106' height='72' alt='' title=''/></span>" .

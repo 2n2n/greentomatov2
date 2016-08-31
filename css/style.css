@@ -277,8 +277,31 @@ footer { }
   position: relative;
 }
 
+.landing .fh-inner {
+  background: #fff;
+  padding: 0px;
+}
+.landing .menu {
+  padding: 0px;
+  margin: 0px;
+}
 .landing header .menu-logo-holder {
   transform: translateY(38%);
+}
+.landing header ul {
+  background: #fff;
+  border: solid 1px #dfdfdf;
+}
+.landing header ul li > a {
+  border-top: 0px;
+  border-bottom: 0px;
+}
+.landing header ul li:first-child > a  {
+  border-left: none;
+}
+
+.landing header ul li:last-child > a{
+  border-right: none;
 }
 
 .landing .player,
@@ -289,15 +312,42 @@ footer { }
 .landing .fh-inner {
   display: flex;
 }
-.landing .desc h2 {
+
+.landing .desc h2,
+.landing .desc h3 {
+  line-height: initial;
   font-family: 'neou';
+  text-align: center;
+  font-size: 15px;
+}
+
+.landing .desc h2 {
+  margin-top: 20px;
   font-size: 30px;
 }
+.landing .desc h2 span {
+  color: #9eb563;
+}
+
+
 .landing .desc {
   width: 30%;
   padding: 10px;
 }
 .landing .player {
   width: 70%;
+}
+.landing .saling-pusa {
+    height: 68%;
+    width: 68%;
+    background: #fff;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%) translateY(-50%) rotate(45deg);
+} 
+
+.landing .feature-holder {
+  padding: 0px;
 }
 
