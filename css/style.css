@@ -93,7 +93,7 @@ footer { }
 .menu-logo .visible { opacity:1; -webkit-transform: translate3d(0, 0, 0); }
 
 .menu-logo-holder  { position:relative; width:150px !important; margin-left:-28px !important; z-index:9; }
-.menu { position:relative; font-size:18px; font-family:'neou'; font-weight:bold; width:100%; margin-left:3px; padding-bottom:5px; text-transform:uppercase; }
+.menu { position:relative; font-size:18px; font-family:'neou'; font-weight:bold; width:100%; padding-bottom:5px; text-transform:uppercase; }
 .menu-logo { display:block; width:213px; height:212px; margin-left:-21px; }
 .menu-logo span { display:block; }
 .menu ul li { display:inline-block; vertical-align:middle; width:186px; margin-left:-7px; background:#fff; }
@@ -113,7 +113,7 @@ footer { }
 
 /** FAQ **/
 .menu-inner .menu-logo { top:-106px; }
-.inner-page { padding-top:5px; }
+.inner-page { padding-top:5px; margin-bottom: 10px; }
 .header-banner { padding-top:30px; }
 .menu-inner { position:relative; padding-top:15px; }
 .container-holder { width:50%; padding:10px; padding-bottom:40px; box-sizing:border-box; }
@@ -369,3 +369,39 @@ footer { }
   padding: 0px;
 }
 
+/* Green Tomato Footer */
+.gt-footer {
+  background: #EBEBEB;
+  min-height: 200px;
+  -webkit-box-shadow: inset 0px 1px 2px 0px rgba(0,0,0,0.75);
+  -moz-box-shadow: inset 0px 1px 2px 0px rgba(0,0,0,0.75);
+  box-shadow: inset 0px 1px 2px 0px rgba(0,0,0,0.75);
+}
+
+.gt-footer .gt-footer-logo {
+  position: relative;
+  text-align: center;
+}
+
+.gt-footer ul.gt-partners {
+  text-align: center;
+  padding-top: 45px;
+}
+.gt-footer .gt-footer-logo img {
+  position: absolute;
+  height: 70px;
+  transform: translateY(-52%);
+}
+
+.gt-footer ul.gt-partners li{
+  vertical-align: top;
+  display: inline-block;
+  max-width: 300px;
+}
+
+.gt-footer ul.gt-partners li {
+  max-width: 200px;
+}
+.gt-footer ul.gt-partners li img {
+  width: 100%;
+}
