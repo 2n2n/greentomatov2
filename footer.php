@@ -1,6 +1,7 @@
 </section>
 <footer>
 	<div class="gt-footer">
+		<div class="copyrights">&copy; 2016 GREEN TOMATO PRODUCTIONS</div>
 		<div class="gt-footer-logo">
 			<img src="<?php echo get_template_directory_uri().'/html/images/page_template/menu_logo.png'?>" alt="greentomato footer logo">
 		</div>

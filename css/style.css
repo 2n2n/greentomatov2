@@ -371,11 +371,12 @@ footer { }
 
 /* Green Tomato Footer */
 .gt-footer {
+  margin-top:8em;
   background: #EBEBEB;
   min-height: 200px;
-  -webkit-box-shadow: inset 0px 1px 2px 0px rgba(0,0,0,0.75);
-  -moz-box-shadow: inset 0px 1px 2px 0px rgba(0,0,0,0.75);
-  box-shadow: inset 0px 1px 2px 0px rgba(0,0,0,0.75);
+  -webkit-box-shadow: inset 0px 1px 22px 0px rgba(0,0,0,0.75);
+  -moz-box-shadow: inset 0px 1px 22px 0px rgba(0,0,0,0.75);
+  box-shadow: inset 0px 1px 22px 0px rgba(0,0,0,0.75);
 }
 
 .gt-footer .gt-footer-logo {
@@ -396,12 +397,17 @@ footer { }
 .gt-footer ul.gt-partners li{
   vertical-align: top;
   display: inline-block;
-  max-width: 300px;
 }
 
 .gt-footer ul.gt-partners li {
-  max-width: 200px;
+  max-width: 150px;
 }
 .gt-footer ul.gt-partners li img {
   width: 100%;
+}
+
+.gt-footer .copyrights {
+  position: absolute;
+  transform: translateY(-150%);
+  right: 20px;
 }
