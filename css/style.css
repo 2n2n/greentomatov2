@@ -274,7 +274,7 @@ footer { }
 .col3 ul li { display:inline-block; vertical-align:top; max-width:435px; padding:90px 15px 30px 15px; box-sizing:border-box; }
 .col3 ul li:nth-child(2) { background:#ededed; }
 .col3 i.fa { font-size:50px; }
-.sns-icon h2 { font-size:40px; font-family:'neou'; width:240px; margin:2px auto 0 auto; line-height:36px; text-align:center; text-transform:uppercase; border-top:1px solid #c7c7c7; border-bottom:1px solid #c7c7c7; }
+.sns-icon h2 { font-size:40px; font-family:'neou'; width:240px; margin:2px auto 0 auto; text-align:center; text-transform:uppercase; border-top:1px solid #c7c7c7; border-bottom:1px solid #c7c7c7; }
 .sns-icon h2 span { display:inline-block; padding-top:7px; }
 .sns-content { margin-top:15px; }
 .sns-content img { width:100%; height:auto; }

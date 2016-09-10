@@ -5,6 +5,7 @@ function gt_enque_css() {
 	wp_enqueue_style('animate', get_template_directory_uri()."/css/animate.css", ['normalize']);
 	wp_enqueue_style('gt-theme', get_template_directory_uri()."/css/style.css", ['normalize']);
 	wp_enqueue_style('fancybox-style', get_template_directory_uri()."/css/jquery.fancybox.css", ['normalize']);
+	wp_enqueue_style('font-awesome', get_template_directory_uri()."/css/font-awesome.min.css", ['normalize']);
 }
 
 function gt_enque_js() {
