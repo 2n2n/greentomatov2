@@ -49,22 +49,6 @@
 			autoSize:true,
 			type: 'iframe'
 		});
-
-		// Video Popup
-		// $(".video-popup").animatedModal({
-		// 	afterOpen: function() {
-		// 		var videoURL = $('.videoPlay').prop('src');
-		// 		videoURL += "&autoplay=1";
-		// 		$('#videoPlay').prop('src',videoURL);
-		// 	},
-		// 	beforeClose: function() {
-		// 		var videoURL = $('.videoPlay').prop('src');
-		// 		videoURL = videoURL.replace("&autoplay=1", "");
-		// 		$('#videoPlay').prop('src','');
-		// 		$('#videoPlay').prop('src',videoURL);
-		// 	},
-		// });
-
 	});
 
 	$(window).load(function() {
@@ -78,5 +62,16 @@
 			$('.pace-inactive').hide();
 		}, 500);
 	});
+
+	$('.topic').find('.title').on('click', function(e){
+		e.preventDefault();
+		var $target = $(this).parent();
+
+		if($target.find('.description').hasClass('show')) return;
+
+		$('.description').removeClass('show');
+		$target.find('.description').addClass('show');
+
+	})
 	
 })(jQuery, window, document);
