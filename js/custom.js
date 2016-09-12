@@ -52,7 +52,22 @@
 	});
 
 	$(window).load(function() {
-		resize();
+		var picContainer = $('.feature-pic');
+		$.each(picContainer, function(k, v) {
+			var container = $(this);
+			var bgURL = container.find('img').attr('src');
+			container.css('background-image', 'url(' + bgURL + ')'); 
+		});
+
+		var featureList = $('.feature-list').find('li');
+		$.each(featureList,function(v, k) {
+			var container = $(this); // li
+			var next = container.find('div.feature-pic');
+			var target = container.find('.featured-content');
+			target.parent('p').remove();
+			container.append(target);
+
+		});
 	});
 
 	// preloader once done
@@ -72,6 +87,7 @@
 		$('.description').removeClass('show');
 		$target.find('.description').addClass('show');
 
-	})
+	});
+
 	
 })(jQuery, window, document);

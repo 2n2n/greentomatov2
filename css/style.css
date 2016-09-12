@@ -255,12 +255,25 @@ footer { }
 .watch-video a:hover { color:#c60407; }
 
 /** Feature Film **/
-.feature-holder h1 { font-size:50px; font-family:'neou'; font-weight:normal; color:#7b7b7b; text-align:center; }
+.feature .fh-inner { text-align: center; }
+.feature-holder h1 { margin-top: 20px; display: inline-block; font-size:50px; font-family:'neou'; font-weight:normal; color:#7b7b7b; text-align:center; border-top: 1px solid #c7c7c7; border-bottom: 1px solid #c7c7c7;}
 .feature-holder h1 span { padding-top:7px; border-top:1px solid #7b7b7b; border-bottom:1px solid #7b7b7b; }
 .feature-holder { margin:40px 0; padding:10px; border:1px solid #dfdfdf; }
 .fh-inner { padding:10px 10px; padding-top:10px; background:#ededed; }
 .feature-list { padding-top:30px; }
-.feature-list ul li { display:inline-block; text-align:left; vertical-align:top; max-width:395px; padding:0 13px; }
+.feature-list ul {display: block;}
+.feature-list ul li { vertical-align: top; display:inline-block; width:395px; height: 224px; margin:0px 13px 10px; overflow: hidden;}
+.feature-list ul li .feature-pic > img { display: none; }
+.feature-list .feature-pic.img{ height: 100%; width: 100%; background-repeat: no-repeat; background-size: cover;  background-position: center; }
+.feature-list li .featured-content{ position:relative; z-index: 9999;display:block; border: solid 1px #fff; width: 300px; margin: 0px auto 0px; padding: 0px 10px 10px;}
+.feature-list li:hover .feature-pic.img{ -webkit-filter: blur(1px); -moz-filter: blur(1px); -o-filter: blur(1px); -ms-filter: blur(1px); filter: blur(1px); }
+.feature-list li:hover .featured-content { margin-top: -150px; }
+.feature-list li .featured-content .h2 {text-transform: uppercase; font-size: 18px; }
+.feature-list li .featured-content .h3 { font-size: 16px; }
+.feature-list li .featured-content,
+.feature-list li .featured-content .h2,
+.feature-list li .featured-content .h3,
+.feature-list li .featured-content .h4 {color: #fff; text-shadow: 0px 1px 3px rgba(8,8,8, 1);}
 
 .feature-content { padding-top:5px;  }
 .feature-content h2 { font-size:24px; font-family:'neou'; line-height:24px; padding-top:5px; padding-bottom:5px; color:#9eb563; text-transform:uppercase; }
