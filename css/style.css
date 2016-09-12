@@ -388,6 +388,9 @@ footer { }
   background: #fff;
   padding: 0px;
 }
+.landing .fh-inner > * {
+  vertical-align: top;
+}
 .landing .menu {
   padding: 0px;
   margin: 0px;
