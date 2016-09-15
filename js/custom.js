@@ -66,8 +66,9 @@
 			var target = container.find('.featured-content');
 			target.parent('p').remove();
 			container.append(target);
-
 		});
+
+		$('.menu > ul > li').on('hover', function() { $(this).find('ul').toggleClass('show') })
 	});
 
 	// preloader once done

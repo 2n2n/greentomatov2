@@ -1,6 +1,9 @@
 <?php /* Template Name: Landing Page */ ?>
-
-<?php get_header(); ?>
+	
+<?php
+// clean_custom_menus('green-tomato-menu'); 
+// die;
+get_header(); ?>
 
 <section id="main-wrapper" style="padding-bottom: 0px;">
 	<div class="inner-page bp-rel auto landing">

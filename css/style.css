@@ -96,10 +96,14 @@ footer { }
 .menu { position:relative; font-size:18px; font-family:'neou'; font-weight:bold; width:100%; padding-bottom:5px; text-transform:uppercase; }
 .menu-logo { display:block; width:213px; height:212px; margin-left:-21px; }
 .menu-logo span { display:block; }
-.menu ul li { display:inline-block; vertical-align:middle; width:186px; margin-left:-7px; background:#fff; }
-.menu ul li a { display:block; padding:8px 0 5px 0; color:#7b7b7b; text-align:center; border:1px solid #dfdfdf; }
-.menu ul li:hover{ position:relative; z-index:2; }
-.menu ul li a:hover { box-shadow:0 0 5px #7b7b7b; background:#f4f2f1; }
+.menu > ul > li { display:inline-block; position: relative; vertical-align:middle; width:186px; margin-left:-7px; background:#fff; }
+.menu > ul li > a { display:block; padding:8px 0 5px 0; color:#7b7b7b; text-align:center; border:1px solid #dfdfdf; }
+.menu > ul li:hover{ position:relative; z-index:2; }
+.menu > ul li a:hover { box-shadow:0 0 5px #7b7b7b; background:#f4f2f1; }
+.menu > ul > li > ul > li { background:#f4f2f1; }
+.menu > ul > li > ul > li > a { text-align: left; padding: 8px; padding-left: 15px; }
+.menu > ul > li > ul { position: absolute; display: none; transition: all 1s; overflow-y: hidden;}
+.menu > ul > li > ul.show { display: block; }
 .menu .menu-logo-holder a { display: block; border:none; }
 .menu .menu-logo-holder a:hover { box-shadow: none; background: none; }
 .menu ul li:nth-child(3) { width:226px; }
@@ -303,6 +307,12 @@ footer { }
 .work-us .container-left textarea { width: 100%; height: 34px; padding: 5px; border: 1px solid #d0ccca; background: #fff; box-sizing: border-box; }
 .work-us .container-left textarea { height: 204px; }
 .work-us .container-left input[type="submit"] { font-size: 16px; padding: 8px 25px; color: #b8b3b0; border: 1px solid #d0ccca; background: #fff; }
+.work-us .find-us.set.fl h3 img {
+  margin-right: 10px;
+}
+.work-us .find-us.set.fl h3 > * {
+  vertical-align: baseline;
+}
 
 .work-map { position: relative; width: 100%; height: 243px; padding: 20px; margin-bottom: 20px; box-sizing: border-box; overflow: hidden; }
 .work-us .container-right { padding-top: 25px; }

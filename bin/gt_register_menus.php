@@ -16,17 +16,44 @@ function format_title($title) {
 	return $formatted_title;
 }
 
+function remap_array($menus) {
+	$menu_remapped = [];
+	foreach($menus as $key => $current) {
+		if($current->menu_item_parent == 0) {
+			array_push($menu_remapped, $current);
+			foreach($menus as $menu) {
+				if($current->ID == $menu->menu_item_parent) {
+					if(!isset($menu_remapped[$key]->children)) { $menu_remapped[$key]->children = []; }
+					array_push($menu_remapped[$key]->children, $menu);  
+				}
+			}
+			continue;
+		}
+	}
+	return $menu_remapped;
+}
 function clean_custom_menus($menu_name) {
 	$list_html = "<ul>";
 	$template_url = get_template_directory_uri();
 	$base_url = get_site_url();
 	if (($locations = get_nav_menu_locations()) && isset($locations[$menu_name])) {
 		$menu = wp_get_nav_menu_object($locations[$menu_name]);
+
 		$menu_items = (array) wp_get_nav_menu_items($menu->term_id);
-		
+		$menu_items = remap_array($menu_items);
+
 		foreach ($menu_items as $key => $menu_item) {
 			$title = format_title($menu_item->title);
-			if($key == 3) {
+			if(property_exists($menu_item, 'children')) {
+				$list_html .= "<li><a href='{$menu_item->url}'>{$title}</a><ul>";
+				
+				foreach($menu_item->children as $submenu) {
+					$list_html .= "<li><a href='{$submenu->url}'>{$submenu->title}</a></li>";
+				}
+
+				$list_html .= "</ul></li>";
+			}
+			else if($key == 3) {
 				$list_html .= "<li class='menu-logo-holder'>" .
 					"<a href='{$base_url}'>" .
 						"<div class='menu-logo bp-ab'> <div class='saling-pusa'></div>" .
@@ -38,8 +65,11 @@ function clean_custom_menus($menu_name) {
 						"</div>" .
 					"</a>" .
 				"</li>";
+				continue;
 			}
-			$list_html .= "<li><a href='{$menu_item->url}'>{$title}</a></li>";
+			else {
+				$list_html .= "<li><a href='{$menu_item->url}'>{$title}</a></li>";
+			}
 		}
 
 	} 
