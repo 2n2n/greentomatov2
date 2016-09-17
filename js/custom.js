@@ -67,8 +67,12 @@
 			target.parent('p').remove();
 			container.append(target);
 		});
+		
+		$('.menu > ul > li').find('ul').removeClass('show');
 
-		$('.menu > ul > li').on('hover', function() { $(this).find('ul').toggleClass('show') })
+		$('.menu > ul > li').on('hover', function(e) {
+			$(this).find('ul').toggleClass('show');
+		});
 	});
 
 	// preloader once done

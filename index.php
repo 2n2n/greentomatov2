@@ -26,22 +26,6 @@ get_header();
 							</div>
 						</div>
 						<div class="clr"></div>
-
-						<div id="the_post-id-<?php echo get_the_ID(); ?>" class="animatedModal">
-							<div class="close-animatedModal close-the_post-id-<?php echo get_the_ID()?>"></div>
-								<div class="modal-content">
-									<div class="video-content fl">
-										<?php echo $meta_video; ?>
-									</div>
-									<div class="video-content v-c-right fr">
-										<h2><?php the_title(); ?></h2>
-										<h3>Mike and Kit <span>Sunday: February 27, 2015</span></h3>
-										<p>“Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.”</p>
-										<p>“Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.”</p>
-										<p>“Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.”</p>
-									</div>
-								</div>
-						</div>
 					</li>
 				<?php 
 					endwhile;

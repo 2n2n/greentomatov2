@@ -44,16 +44,8 @@ function clean_custom_menus($menu_name) {
 
 		foreach ($menu_items as $key => $menu_item) {
 			$title = format_title($menu_item->title);
-			if(property_exists($menu_item, 'children')) {
-				$list_html .= "<li><a href='{$menu_item->url}'>{$title}</a><ul>";
-				
-				foreach($menu_item->children as $submenu) {
-					$list_html .= "<li><a href='{$submenu->url}'>{$submenu->title}</a></li>";
-				}
-
-				$list_html .= "</ul></li>";
-			}
-			else if($key == 3) {
+			
+			if($key == 3) {
 				$list_html .= "<li class='menu-logo-holder'>" .
 					"<a href='{$base_url}'>" .
 						"<div class='menu-logo bp-ab'> <div class='saling-pusa'></div>" .
@@ -65,11 +57,20 @@ function clean_custom_menus($menu_name) {
 						"</div>" .
 					"</a>" .
 				"</li>";
-				continue;
+			}
+			if(property_exists($menu_item, 'children')) {
+				$list_html .= "<li><a href='{$menu_item->url}'>{$title}</a><ul>";
+				
+				foreach($menu_item->children as $submenu) {
+					$list_html .= "<li><a href='{$submenu->url}'>{$submenu->title}</a></li>";
+				}
+
+				$list_html .= "</ul></li>";
 			}
 			else {
 				$list_html .= "<li><a href='{$menu_item->url}'>{$title}</a></li>";
 			}
+
 		}
 
 	} 

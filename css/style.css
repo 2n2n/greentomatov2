@@ -100,11 +100,13 @@ footer { }
 .menu > ul li > a { display:block; padding:8px 0 5px 0; color:#7b7b7b; text-align:center; border:1px solid #dfdfdf; }
 .menu > ul li:hover{ position:relative; z-index:2; }
 .menu > ul li a:hover { box-shadow:0 0 5px #7b7b7b; background:#f4f2f1; }
-.menu > ul > li > ul > li { background:#f4f2f1; }
-.menu > ul > li > ul > li > a { text-align: left; padding: 8px; padding-left: 15px; }
+.menu > ul > li > ul > li { background:#f4f2f1; display: block}
+.menu > ul > li > ul > li > a { border: none; text-align: left; padding: 8px; padding-left: 15px; display: block; }
 .menu > ul > li > ul { position: absolute; display: none; transition: all 1s; overflow-y: hidden;}
-.menu > ul > li > ul.show { display: block; }
-.menu .menu-logo-holder a { display: block; border:none; }
+.menu > ul > li > ul.show { display: block; background-color: #f4f2f1; z-index: 1; }
+.menu .menu-logo-holder .menu-logo { left: 0px; }
+.menu .menu-logo-holder a { display: inherit; border:none; }
+.menu .menu-logo-holder li { min-width: 155px; }
 .menu .menu-logo-holder a:hover { box-shadow: none; background: none; }
 .menu ul li:nth-child(3) { width:226px; }
 .menu ul li:nth-child(3) a { padding-right:40px; }
@@ -221,6 +223,8 @@ footer { }
   height: 10px;
   width: 10px;
   background: green;
+  -ms-transform: rotate(45deg) translateY(-50%);
+  -webkit-transform: rotate(45deg) translateY(-50%);
   transform: rotate(45deg) translateY(-50%);
   top: 50%;
   position: absolute;
@@ -351,7 +355,14 @@ footer { }
   .menu ul li { width:130px; }
   .menu ul li:nth-child(3),.menu ul li:nth-child(5) { width: 190px; }
   .menu-logo-holder { width: 108px !important; margin-left: -28px !important; }
-  .menu-logo { width: 170px; height:170px; margin-left: -30px; }
+  .menu-logo { 
+    width: 170px; 
+    height:170px; 
+    margin-left: -18px; 
+  }
+  .menu-inner .menu-logo {
+    top: -76px;
+  }
   .menu-logo img { width:100%; height:auto; }
   .menu-logo span.logo-part1 { width:85px; }
   .menu-logo span.logo-part2 { width:85px; }
@@ -407,6 +418,8 @@ footer { }
 }
 .landing header .menu-logo-holder {
   transform: translateY(38%);
+  -ms-transform: translateY(38%);
+  -webkit-transform: translateY(38%);
 }
 .landing header ul {
   background: #fff;
@@ -450,7 +463,9 @@ footer { }
 .greenify {
   color: #9eb563;
 }
-
+.landing .desc h2, h3 {
+  font-family: 'neou';
+}
 .landing .desc,
 .landing .pitch,
 .landing .pitch h3 {
@@ -463,6 +478,7 @@ footer { }
   padding: 10px 20px;
 }
 
+
 .landing table,
 .landing p {
   margin: 10px 0px;
@@ -473,7 +489,7 @@ footer { }
 
 
 .landing .player {
-  width: 70%;
+  width: 80%;
 }
 .landing .saling-pusa {
     height: 68%;
@@ -482,6 +498,8 @@ footer { }
     position: absolute;
     top: 50%;
     left: 50%;
+    -ms-transform: translateX(-50%) translateY(-50%) rotate(45deg);
+    -webkit-transform: translateX(-50%) translateY(-50%) rotate(45deg);
     transform: translateX(-50%) translateY(-50%) rotate(45deg);
 } 
 
@@ -511,6 +529,8 @@ footer { }
 .gt-footer .gt-footer-logo img {
   position: absolute;
   height: 70px;
+  -ms-transform: translateY(-52%);
+  -webkit-transform: translateY(-52%);
   transform: translateY(-52%);
 }
 
@@ -528,6 +548,8 @@ footer { }
 
 .gt-footer .copyrights {
   position: absolute;
+  -ms-transform: translateY(-52%);
+  -webkit-transform: translateY(-52%);
   transform: translateY(-150%);
   right: 20px;
 }
