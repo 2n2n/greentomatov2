@@ -30,7 +30,7 @@ function get_meta_video() {
 function get_sub_categories($category_id) {
 
     $affected = get_term_children($category_id, 'category');
-    $args = ['include' => $affected, 'orderby' => 'term_id'];
+    $args = ['include' => $affected, 'hide_empty' => 0, 'orderby' => 'term_id'];
     return get_categories($args);
 }
 
