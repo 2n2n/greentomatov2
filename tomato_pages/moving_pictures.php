@@ -3,26 +3,36 @@ get_header();
 ?>
 	<?php get_template_part('partials/nav'); ?>
 	<section id="main-wrapper">
-		<div class="inner-page bp-rel auto about">
+		<div class="inner-page bp-rel auto moving-pic">
 			<div class="wedding-post container-holder">
-				<ul>
-				<?php 
-				$category = term_exists('Moving Pictures', 'category');
+				<div class="custom-holder">
+					<div class="custom leftie">
+						<?php
+						$category = term_exists('Moving Pictures', 'category');
+						render_sub_categories($category['term_id']);
+						?>
+					</div>
+					<div class="custom rightie">&nbsp;</div>
+				</div>
+				<ul class="item-list">
+				<?php				
+				
 				$args = array('category' => $category['term_id']);
 				$posts = get_posts( $args );
-				// dd($posts);
+				
 				if(count($posts) > 0): 
 					foreach($posts as $key => $post): setup_postdata($post); ?>
 					<?php $meta_video = get_meta_video(); ?>
 					<li>
-						<div class="wedding-left wedding-inner fl">
-							<?php if($key == 0): ?><h2>WEDDINGS</h2> <?php endif;?>
-							<div class="wedding-post-video img fl"><a class="video-popup" href="#the_post-id-<?php echo get_the_ID(); ?>">
+						<div class="wedding-left wedding-inner">
+							<?php if($key == 0): ?>
+							<?php endif;?>
+							<div class="wedding-post-video img"><a class="video-popup" href="#the_post-id-<?php echo get_the_ID(); ?>">
 								<?php echo $meta_video; ?>
 							</div>
 						</div>
 						<div class="wedding-right wedding-inner wedding-right-1 fr">
-							<h2><?php the_title(); ?></h2>
+							<h2><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h2>
 							<h3><?php the_date() ?></h3>
 							<p><?php the_content(); ?></p>
 							<div class="watch-video">
@@ -31,20 +41,6 @@ get_header();
 							</div>
 						</div>
 						<div class="clr"></div>
-						
-							<!-- <div id="the_post-id-<?php echo get_the_ID(); ?>" class="animatedModal">
-								<div class="close-animatedModal close-the_post-id-<?php echo get_the_ID()?>"></div>
-									<div class="modal-content">
-										<div class="video-content fl">
-											<?php echo $meta_video;?>
-										</div>
-										<div class="video-content v-c-right fr">
-											<h2><?php the_title(); ?></h2>
-											<h3>Mike and Kit <span>Sunday: February 27, 2015</span></h3>
-											<p><?php the_content(); ?></p>
-										</div>
-									</div>
-							</div> -->
 					</li>
 				<?php 
 					wp_reset_postdata();

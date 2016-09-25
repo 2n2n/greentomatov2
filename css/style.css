@@ -253,6 +253,7 @@ footer { }
 .wedding-post-video iframe { width: 100% !important; height: 300px !important; }
 
 .wedding-inner { width:50%; box-sizing:border-box; }
+.wedding-right h2 a, 
 .wedding-right h2 { padding-bottom:0; color:#9eb563; }
 .wedding-right.wedding-right-1 { padding:73px 15px 15px 15px; }
 .wedding-right { font-size:16px; padding:15px; padding-top:20px; }
@@ -552,4 +553,68 @@ footer { }
   -webkit-transform: translateY(-52%);
   transform: translateY(-150%);
   right: 20px;
+}
+
+/* Moving picture custom style */
+
+.moving-pic ul.sub-categories {
+  margin: 20px 10px;
+}
+.moving-pic ul.sub-categories li {
+  display: inline-block;
+  vertical-align: middle;
+  border-left: solid 1px #fff;
+}
+.moving-pic ul.sub-categories li:first-child {
+  border-left: 0px;
+}
+
+.moving-pic .wedding-inner {
+  vertical-align: top;
+  flex: 1;
+}
+.wedding-post ul li:first-child .wedding-inner,
+.wedding-post ul li .wedding-inner {
+  background: transparent;
+}
+.wedding-post ul.item-list li {
+  background: #464040;
+  display: flex;
+}
+.moving-pic .wedding-right {
+  background-color: #fff !important;
+  padding: 15px;
+  padding-top: 0px;
+}
+.moving-pic .wedding-right h2 {
+  margin: 20px 0px 0px;
+  line-height: auto;
+  padding-top: 0px;
+}
+.moving-pic .wedding-right h3 {
+  font-size: 15px;
+}
+
+.moving-pic .wedding-post {
+  padding: 0px;
+} 
+.moving-pic ul.sub-categories li a {
+  color: #fff;
+  font-size: 18px;
+  text-transform: uppercase;
+  padding: 10px;
+  font-weight: normal;
+  font-family: 'neou';
+}
+
+.moving-pic .custom-holder {
+  display: flex;
+}
+
+.moving-pic .custom {
+  flex: 1;
+}
+
+.moving-pic .custom.leftie {
+  background: #464040;
 }

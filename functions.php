@@ -26,6 +26,23 @@ function get_meta_video() {
 	$id = get_the_ID();
 	return get_post_meta($id, 'gt_video', true);
 }
+
+function get_sub_categories($category_id) {
+
+    $affected = get_term_children($category_id, 'category');
+    $args = ['include' => $affected, 'orderby' => 'term_id'];
+    return get_categories($args);
+}
+
+function render_sub_categories ($term_id) {
+    $sub_categories = get_sub_categories($term_id);
+    echo "<ul class='sub-categories'>";
+    foreach($sub_categories as $val) {
+        echo "<li><a href='".get_category_link($val)."'>" .$val->name. "</a></li>";
+    }
+    echo "</ul>";
+
+}
 //register menu
 add_action('init', 'gt_register_menus');
 
