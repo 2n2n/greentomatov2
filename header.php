@@ -11,6 +11,7 @@
 <meta name="viewport" content="width=1024, initial-scale=1, maximum-scale=1">
 
 <!--[if lt IE 10]> <script src="<?php echo get_template_directory_uri() ?>/js/css3-mediaqueries.js"></script> <![endif]-->
+<link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
 <?php wp_head(); ?>
 
 </head>

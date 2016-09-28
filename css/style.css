@@ -18,7 +18,7 @@ textarea { outline:none; resize:none; }
 header { background:#fff; }
 .home-logo { padding:36px 0 40px 0; }
 
-#main-wrapper {}
+#main-wrapper {  }
 .fl { float:left; }
 .fr { float:right; }
 .clr { float:none; clear:both; }
@@ -271,18 +271,21 @@ footer { }
 .fh-inner { padding:10px 10px; padding-top:10px; background:#ededed; }
 .feature-list { padding-top:30px; }
 .feature-list ul {display: block;}
-.feature-list ul li { vertical-align: top; display:inline-block; width:395px; height: 224px; margin:0px 13px 10px; overflow: hidden;}
+.feature-list ul li { vertical-align: top; display:inline-block; width:395px; height: 224px; margin:10px; overflow: hidden;}
 .feature-list ul li .feature-pic > img { display: none; }
-.feature-list .feature-pic.img{ height: 100%; width: 100%; background-repeat: no-repeat; background-size: cover;  background-position: center; }
-.feature-list li .featured-content{ position:relative; z-index: 9999;display:block; border: solid 1px #fff; width: 300px; margin: 0px auto 0px; padding: 0px 10px 10px;}
-.feature-list li:hover .feature-pic.img{ -webkit-filter: blur(1px); -moz-filter: blur(1px); -o-filter: blur(1px); -ms-filter: blur(1px); filter: blur(1px); }
-.feature-list li:hover .featured-content { margin-top: -150px; }
-.feature-list li .featured-content .h2 {text-transform: uppercase; font-size: 18px; }
+.feature-list .feature-pic.img{ height: 100%; width: 100%; background-repeat: no-repeat; background-size: cover; background-position: center;  -webkit-transition: filter 1.5s; /* Safari */ transition: filter 1.5s; }
+.feature-list li .featured-content{ position:relative; z-index: 9999;display:block; border: solid 1px #fff; width: 300px; margin: 0px auto 0px; padding: 0px 10px 10px; 
+  -webkit-transition: margin .3s ease-in-out; /* Safari */ 
+  transition: margin .3s ease-in-out;
+}
+.feature-list li:hover .feature-pic.img{ -webkit-filter: blur(3px); -moz-filter: blur(3px); -o-filter: blur(3px); -ms-filter: blur(3px); filter: blur(3px); }
+.feature-list li:hover .featured-content { margin-top: -110px; }
 .feature-list li .featured-content .h3 { font-size: 16px; }
 .feature-list li .featured-content,
 .feature-list li .featured-content .h2,
 .feature-list li .featured-content .h3,
-.feature-list li .featured-content .h4 {color: #fff; text-shadow: 0px 1px 3px rgba(8,8,8, 1);}
+.feature-list li .featured-content .h4 {color: #fff; text-shadow: 0px 1px 3px rgba(8,8,8, 1); font-family: "Open Sans";}
+.feature-list li .featured-content .h2 {text-transform: uppercase; font-family: 'neou'; font-size: 18px; }
 
 .feature-content { padding-top:5px;  }
 .feature-content h2 { font-size:24px; font-family:'neou'; line-height:24px; padding-top:5px; padding-bottom:5px; color:#9eb563; text-transform:uppercase; }
@@ -513,9 +516,28 @@ footer { }
   margin-top:8em;
   background: #EBEBEB;
   min-height: 200px;
-  -webkit-box-shadow: inset 0px 1px 22px 0px rgba(0,0,0,0.75);
+  background-image: url('../images/bg.png');
+  background-repeat: repeat-x;
+  /*  -webkit-box-shadow: inset 0px 1px 22px 0px rgba(0,0,0,0.75);
   -moz-box-shadow: inset 0px 1px 22px 0px rgba(0,0,0,0.75);
-  box-shadow: inset 0px 1px 22px 0px rgba(0,0,0,0.75);
+  box-shadow: inset 0px 1px 22px 0px rgba(0,0,0,0.75);*/
+  background-position-x: 0px;
+  background-position-y: -90px;
+}
+
+.gt-footer .title-container {
+  text-align: center;
+}
+.gt-footer .h2 {
+  color: #9eb563;
+  line-height: auto;
+  padding: 5px 10px 0px;
+  margin: 0px auto;
+  display: inline-block;
+  font-size: 30px;
+  font-family: 'neou';
+  text-align: center;
+  text-transform: uppercase;
 }
 
 .gt-footer .gt-footer-logo {
@@ -525,10 +547,9 @@ footer { }
 
 .gt-footer ul.gt-partners {
   text-align: center;
-  padding-top: 45px;
+  padding: 20px;
 }
 .gt-footer .gt-footer-logo img {
-  position: absolute;
   height: 70px;
   -ms-transform: translateY(-52%);
   -webkit-transform: translateY(-52%);
@@ -541,10 +562,10 @@ footer { }
 }
 
 .gt-footer ul.gt-partners li {
-  max-width: 150px;
+  height: 70px;
 }
 .gt-footer ul.gt-partners li img {
-  width: 100%;
+  height: 100%;
 }
 
 .gt-footer .copyrights {
@@ -553,6 +574,8 @@ footer { }
   -webkit-transform: translateY(-52%);
   transform: translateY(-150%);
   right: 20px;
+  font-family: "Open Sans";
+  font-weight: bold;
 }
 
 /* Moving picture custom style */
